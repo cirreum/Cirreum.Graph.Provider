@@ -7,7 +7,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Graph" Version="5.97.0" />
-		<PackageReference Include="Cirreum.Core" Version="1.0.18" />
+		<PackageReference Include="Cirreum.Core" Version="1.0.19" />
 	</ItemGroup>
 
 </Project>
