@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<Description>The MsGraph provider for the Cirreum foundation</Description>
@@ -6,9 +6,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Graph" Version="5.105.0" />
-		<PackageReference Include="Microsoft.Kiota.Abstractions" Version="1.22.2" />
 		<PackageReference Include="Cirreum.Core" Version="5.1.0" />
+		<PackageReference Include="Microsoft.Graph" Version="5.105.0" />
+		<!-- Pinned: Microsoft.Graph.Core 1.x requires Kiota 1.x;
+		 CVE in Microsoft.Kiota.Abstractions < 1.22.2.
+		 Lift when Microsoft.Graph upgrades to a Kiota-2.x-compatible line. -->
+		<PackageReference Include="Microsoft.Kiota.Abstractions" Version="1.22.2" AutoUpdate="false" />
 	</ItemGroup>
 
 </Project>
