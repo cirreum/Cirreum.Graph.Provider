@@ -6,7 +6,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Cirreum.Core" Version="5.1.0" />
+		<PackageReference Include="Cirreum.Core" Version="5.2.0" />
 		<PackageReference Include="Microsoft.Graph" Version="5.105.0" />
 		<!-- Pinned: Microsoft.Graph.Core 1.x requires Kiota 1.x;
 		 CVE in Microsoft.Kiota.Abstractions < 1.22.2.
