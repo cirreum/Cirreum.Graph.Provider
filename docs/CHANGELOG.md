@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.53] - 2026-07-04
+
 ### Fixed
 
 - **Dropped the `Cirreum.AuthenticationProvider` reference.** It was added in `v1.0.51` solely for `IGraphEnabledBuilder`, which has since relocated to `Cirreum.Contracts`/`Cirreum.Domain` (host-agnostic profile enrichment doesn't belong in the Authentication feature track). `IGraphEnabledBuilder`/`IExternalGraphEnabledBuilder` now flow in transitively through the existing `Cirreum.Domain` reference (re-pinned to `1.2.0`) — no source changes needed.
