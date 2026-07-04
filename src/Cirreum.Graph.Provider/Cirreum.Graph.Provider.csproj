@@ -6,10 +6,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Cirreum.Domain" Version="1.1.2" />
-		<!-- IGraphEnabledBuilder / IExternalGraphEnabledBuilder — the Graph-feature builder seam
-		 (not part of the Kernel/Contracts/Domain foundation spine; a sibling auth-track package). -->
-		<PackageReference Include="Cirreum.AuthenticationProvider" Version="1.1.1" />
+		<!-- Cirreum.Domain carries IGraphEnabledBuilder / IExternalGraphEnabledBuilder transitively
+		 via Cirreum.Contracts — they're host-agnostic profile-enrichment seams, not an
+		 Authentication-track concern (no Cirreum.AuthenticationProvider reference needed here). -->
+		<PackageReference Include="Cirreum.Domain" Version="1.2.0" />
 		<!-- Pinned as a coordinated pair: Microsoft.Graph requires Microsoft.Graph.Core 4.x, which
 		 requires Microsoft.Kiota.Abstractions >= 2.0.0 (see the pin below). AutoUpdate is off on
 		 both so a routine sweep can't bump one without the other — verify compatibility, then lift

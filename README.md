@@ -53,7 +53,7 @@ The library uses a provider pattern with `IGraphServiceClientProvider` to manage
 
 - .NET 10.0 or later
 - Microsoft Graph API access with appropriate permissions for presence data
-- `Cirreum.Domain` (foundation) and `Cirreum.AuthenticationProvider` (the `IGraphEnabledBuilder` seam) — both flow in transitively when composing Graph services through an `IEntraAuthenticationBuilder` (e.g. `Cirreum.Runtime.Wasm.Msal`)
+- `Cirreum.Domain` (foundation, incl. `IGraphEnabledBuilder`/`IExternalGraphEnabledBuilder` via `Cirreum.Contracts`) — flows in transitively when composing Graph services through an `IEntraAuthenticationBuilder` (e.g. `Cirreum.Runtime.Wasm.Msal`)
 
 ## Contribution Guidelines
 
