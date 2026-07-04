@@ -24,8 +24,7 @@
 Register the Microsoft Graph presence service in your Blazor WebAssembly application:
 
 ```csharp
-builder.Services
-    .AddCirreumFoundation()
+builder.AddGraphServices() // Cirreum.Runtime.Wasm.Msal — from an IEntraAuthenticationBuilder
     .WithGraphUserPresence(refreshInterval: 30000); // 30 seconds
 ```
 
@@ -54,7 +53,7 @@ The library uses a provider pattern with `IGraphServiceClientProvider` to manage
 
 - .NET 10.0 or later
 - Microsoft Graph API access with appropriate permissions for presence data
-- Cirreum.Core package for foundational framework support
+- `Cirreum.Domain` (foundation) and `Cirreum.AuthenticationProvider` (the `IGraphEnabledBuilder` seam) — both flow in transitively when composing Graph services through an `IEntraAuthenticationBuilder` (e.g. `Cirreum.Runtime.Wasm.Msal`)
 
 ## Contribution Guidelines
 

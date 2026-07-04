@@ -6,9 +6,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<!-- TODO (Tier 2 cutover): blocked on migrating IGraphEnabledBuilder (+ IExternalGraphEnabledBuilder)
-		     out of legacy Cirreum.Core into the local foundation — placement TBD (Graph-feature builder). -->
-		<PackageReference Include="Cirreum.Core" Version="5.3.0" />
+		<PackageReference Include="Cirreum.Domain" Version="1.1.2" />
+		<!-- IGraphEnabledBuilder / IExternalGraphEnabledBuilder — the Graph-feature builder seam
+		 (not part of the Kernel/Contracts/Domain foundation spine; a sibling auth-track package). -->
+		<PackageReference Include="Cirreum.AuthenticationProvider" Version="1.1.1" />
 		<!-- Pinned: Microsoft.Graph 6.x pulls Microsoft.Graph.Core 4.x, which requires
 		 Microsoft.Kiota.Abstractions >= 2.0.0 — a downgrade conflict with the Kiota pin below.
 		 Lift together with the Kiota pin as one deliberate, coordinated upgrade. -->
