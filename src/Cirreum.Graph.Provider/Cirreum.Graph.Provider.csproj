@@ -10,14 +10,15 @@
 		<!-- IGraphEnabledBuilder / IExternalGraphEnabledBuilder — the Graph-feature builder seam
 		 (not part of the Kernel/Contracts/Domain foundation spine; a sibling auth-track package). -->
 		<PackageReference Include="Cirreum.AuthenticationProvider" Version="1.1.1" />
-		<!-- Pinned: Microsoft.Graph 6.x pulls Microsoft.Graph.Core 4.x, which requires
-		 Microsoft.Kiota.Abstractions >= 2.0.0 — a downgrade conflict with the Kiota pin below.
-		 Lift together with the Kiota pin as one deliberate, coordinated upgrade. -->
-		<PackageReference Include="Microsoft.Graph" Version="5.105.0" AutoUpdate="false" />
-		<!-- Pinned: Microsoft.Graph.Core 1.x (the line Microsoft.Graph 5.x depends on) requires Kiota 1.x;
-		 CVE in Microsoft.Kiota.Abstractions < 1.22.2.
-		 Lift together with the Microsoft.Graph pin above. -->
-		<PackageReference Include="Microsoft.Kiota.Abstractions" Version="1.22.2" AutoUpdate="false" />
+		<!-- Pinned as a coordinated pair: Microsoft.Graph requires Microsoft.Graph.Core 4.x, which
+		 requires Microsoft.Kiota.Abstractions >= 2.0.0 (see the pin below). AutoUpdate is off on
+		 both so a routine sweep can't bump one without the other — verify compatibility, then lift
+		 both pins together. -->
+		<PackageReference Include="Microsoft.Graph" Version="6.2.0" AutoUpdate="false" />
+		<!-- Pinned alongside Microsoft.Graph above. Floor is >= 2.0.0 to satisfy Microsoft.Graph.Core 4.x
+		 (not, as previously, a CVE floor — GHSA-7j59-v9qr-6fq9/CVE-2026-44503 was fixed in 1.22.0;
+		 2.0.0 clears it regardless). -->
+		<PackageReference Include="Microsoft.Kiota.Abstractions" Version="2.0.0" AutoUpdate="false" />
 	</ItemGroup>
 
 </Project>
