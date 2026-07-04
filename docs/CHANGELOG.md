@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.52] - 2026-07-04
+
 ### Fixed
 
 - **Coordinated `Microsoft.Graph` / `Microsoft.Kiota.Abstractions` upgrade.** Bumped `Microsoft.Graph` 5.105.0 → 6.2.0 and `Microsoft.Kiota.Abstractions` 1.22.2 → 2.0.0 together (the pair `v1.0.51` pinned after the `v1.0.50` `NU1605` incident). The original Kiota floor was set for a CVE (`GHSA-7j59-v9qr-6fq9`/`CVE-2026-44503`, a redirect-handler header-leak, fixed in `1.22.0`) — `2.0.0` clears that regardless, and Microsoft.Graph 6.x's `Microsoft.Graph.Core 4.x` dependency requires it. Both `AutoUpdate="false"` pins stay in place at the new versions, so a routine sweep still can't bump one without the other.
