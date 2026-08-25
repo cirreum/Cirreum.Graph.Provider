@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <File Path="../src/Directory.Build.props" />
+    <Project Path="../src/Cirreum.Graph.Provider/Cirreum.Graph.Provider.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <File Path="Directory.Build.props" />
+    <Project Path="Cirreum.Graph.Provider.Tests/Cirreum.Graph.Provider.Tests.csproj" />
+  </Folder>
+</Solution>

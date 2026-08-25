@@ -41,7 +41,7 @@ Microsoft Graph availability statuses are mapped to standardized `PresenceStatus
 - `PresenceUnknown` → `Unknown`
 
 **Dependencies:**
-- `Microsoft.Graph` for Graph API access (pinned alongside `Microsoft.Kiota.Abstractions` — see the csproj comments before bumping either)
+- `Microsoft.Graph` for Graph API access, alongside `Microsoft.Kiota.Abstractions`, which `Microsoft.Graph.Core` requires
 - `Cirreum.Domain` for foundational types (Presence, Security) and, transitively via `Cirreum.Contracts`, `IGraphEnabledBuilder`/`IExternalGraphEnabledBuilder` (the Graph-feature builder seam consumed by `GraphEnabledBuilderExtensions`) — see the csproj for the current version
 
 ## Project Structure
