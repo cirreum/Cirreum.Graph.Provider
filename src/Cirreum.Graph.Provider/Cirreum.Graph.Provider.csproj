@@ -9,7 +9,7 @@
 		<!-- Cirreum.Domain carries IGraphEnabledBuilder / IExternalGraphEnabledBuilder transitively
 		 via Cirreum.Contracts — they're host-agnostic profile-enrichment seams, not an
 		 Authentication-track concern (no Cirreum.AuthenticationProvider reference needed here). -->
-		<PackageReference Include="Cirreum.Domain" Version="4.3.1" />
+		<PackageReference Include="Cirreum.Domain" Version="5.0.0" />
 		<PackageReference Include="Microsoft.Graph" Version="6.5.0" />
 	</ItemGroup>
 
