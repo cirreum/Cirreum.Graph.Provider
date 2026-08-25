@@ -11,7 +11,6 @@
 		 Authentication-track concern (no Cirreum.AuthenticationProvider reference needed here). -->
 		<PackageReference Include="Cirreum.Domain" Version="4.3.1" />
 		<PackageReference Include="Microsoft.Graph" Version="6.5.0" />
-		<PackageReference Include="Microsoft.Kiota.Abstractions" Version="2.0.0" />
 	</ItemGroup>
 
 </Project>

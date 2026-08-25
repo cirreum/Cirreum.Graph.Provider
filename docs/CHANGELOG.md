@@ -12,8 +12,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **`Microsoft.Graph` 6.2.0 to 6.5.0, and the version pins are lifted.** 6.5.0 resolves the same
   dependency graph 6.2.0 did — `Microsoft.Graph.Core` 4.0.1, the `Microsoft.Kiota.*` 2.0.0 set,
   `Std.UriTemplate` 2.0.8 — so nothing else moved with it. `AutoUpdate="false"` is removed from
-  `Microsoft.Graph` and `Microsoft.Kiota.Abstractions`: the pin existed because no test suite
-  could tell whether a bump had broken anything, and the package now has one.
+  `Microsoft.Graph`: the pin existed because no test suite could tell whether a bump had broken
+  anything, and the package now has one.
+- **The direct `Microsoft.Kiota.Abstractions` reference is dropped.** It existed only as the other
+  half of the pin — a floor for `Microsoft.Graph.Core` 4.x, which `Microsoft.Graph` already brings.
+  Unpinned but still declared, it could have been swept to a Kiota major that `Graph.Core` 4.x was
+  not built against. It now resolves transitively at the version Graph asks for.
 - Updated NuGet packages.
 
 
