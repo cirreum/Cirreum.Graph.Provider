@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.68] - 2026-08-25
+
 ### Updated
 
 - **`Microsoft.Graph` 6.2.0 to 6.5.0, and the version pins are lifted.** 6.5.0 resolves the same
